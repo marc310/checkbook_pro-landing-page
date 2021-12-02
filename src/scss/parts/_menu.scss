@@ -1,0 +1,215 @@
+
+  .main-menu {
+    display:block;
+    width:100%;
+    background: $primary/*e0b88f/*c99393/*e5d1a4/*dcc591/*EFD3A3*/;
+    line-height: 1.6em;
+    font-weight: 400;
+  // text-align:center;
+    position: relative;
+    margin:0 auto;
+    z-index: 99;
+    @include transitionAll04();
+  }
+  /*Strip the ul of padding and list styling*/
+  .main-menu ul {
+    list-style-type:none;
+    // margin: 0 auto;
+    // padding-left:0;
+    // text-align:center;
+    width:100%;
+    // position: absolute;
+    background: white;
+    box-shadow: inset 0px -1px 0px $gray-1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /*Create a horizontal list with spacing*/
+  // .main-menu li {
+      // display:inline-flex;
+      /*float: left;
+      margin-right: 1px;*/
+  // }
+  
+  /*Style for menu links*/
+  .main-menu{
+    // ul#menu{
+    //   display: flex;
+    // }
+    
+    li a {
+    display: flex;
+    align-items: center;
+    padding: $size-1;
+    display:block;
+    // min-width:140px;
+    // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    // text-transform:uppercase;
+    // background: $text-primary;
+    text-decoration: none;
+    @include p_smallBold();
+    @include transitionAll04();
+    }
+    .menu-links {
+      flex-grow: 1;
+      display: inline-flex;
+      justify-content: flex-end;
+      padding: $size-1;
+      li {
+        & a.button{
+            color: white;
+            display: inline-flex;
+            padding-top: $size-0;
+            padding-bottom: $size-0;
+            padding-right: $size-2;
+            padding-left: $size-2;
+        }
+        & a{
+          color: $gray-3;
+        }
+        &.active{
+          color: $primary;
+        }
+      }
+    }
+    .menu-logo{
+      min-width: 180px;
+      display: flex;
+      align-items: center;
+      & a, & img{
+        display: flex;
+      }
+      // text-align: center;
+    }
+    .topbar{
+      display:flex;
+      padding: $size-1;
+      align-items: center;
+      
+      .mobile-logo{
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+    .show-menu span.mobile-logo a{
+      //    padding-left: 25px;
+      color: white;
+      text-decoration:none;
+    }
+    
+  
+  } 
+  
+  
+  
+  /*Hover state for top level links*/
+  .main-menu li:hover a {
+    color: $primary;
+    // background-color:#ccddee;
+  }
+  
+  /*Style for dropdown links*/
+  .main-menu li:hover ul a {
+      background: #f3f3f3;
+      color: $text-primary;
+      height: 40px;
+      line-height: 40px;
+  }
+  
+  /*Hover state for dropdown links*/
+  .main-menu li:hover .main-menu ul a:hover {
+      color: $primary;
+  }
+  
+  /*Hide dropdown links until they are needed*/
+  .main-menu li ul {
+      display: none;
+  }
+  
+  /*Make dropdown links vertical*/
+  .main-menu li ul li {
+      display: block;
+      float: none;
+  }
+  
+  /*Prevent text wrapping*/
+  .main-menu li ul li a {
+      width: auto;
+      min-width: 100px;
+      padding: 0 20px;
+  }
+  
+  
+  /*Style 'show menu' label button and hide it by default*/
+  .main-menu .show-menu {
+    text-decoration: none;
+    color: $text-primary;
+    background: white;
+    // padding: 10px 15px;
+    display: none;
+    cursor: pointer;
+    
+    // text-transform: uppercase;
+  }
+  
+  // .main-menu .show-menu span{
+  //    padding-left: 25px;
+  // }
+  
+  /*Hide checkbox*/
+  .main-menu input[type=checkbox]{
+      display: none;
+  }
+  
+  /*Show menu when invisible checkbox is checked*/
+  .main-menu input[type=checkbox]:checked ~ #menu{
+      display: block;
+      @include transitionAll04();
+  }
+  
+  /*Responsive Styles*/
+  
+  @media screen and (max-width : 1048px){
+    .main-menu .lines {
+      border-bottom: 15px double $text-primary; 
+      border-top: 5px solid $text-primary; 
+      content:"";
+      height: 5px; 
+      width:20px;
+      padding-right:15px;
+      float: right;
+  }
+    /*Make dropdown links appear inline*/
+    .main-menu {
+      .menu-links {
+        display: block;
+        justify-content: center;
+      }
+      li.menu-logo{
+        display:none;
+      }
+      & ul {
+        position: static;
+        display: none;
+      }
+      /*Create vertical spacing*/
+      & li {
+          margin-bottom: 1px;
+          button {
+            margin-top: 1rem;
+          }
+      }
+      /*Make all menu links full width*/
+      // & ul li, & li a {
+          // width: 100%;
+      // }
+    }
+      
+      /*Display 'show menu' link*/
+      .main-menu .show-menu {
+          display:block;
+      }
+  }

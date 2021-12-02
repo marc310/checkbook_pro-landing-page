@@ -1,0 +1,66 @@
+//
+// base colors
+$green : #06D37D;
+$red : #CC0A16;
+$blue : #1B36B9 ;
+$blue-secondary : #2B1E70 ;
+$blue-dark : #092443 ;
+$blue-darker : #071627 ;
+//grayscale
+$gray-3 : #8F92A1;
+$gray-2 : #D6D8DE;
+$gray-1 : #E4E4E7;
+$gray-0 : #F6F5F5;
+
+// theme colors
+$primary : $blue ;
+$secondary : $blue-secondary ;
+$text-primary : $blue-dark ;
+$dark : $blue-darker ;
+$border : $gray-2 ;
+$background : $gray-0 ;
+
+
+$background-checkbook: $dark;
+$checkbook-border-sm: 1px;
+$checkbook-input-border: 2px;
+
+$section-spacing: 125px;
+$section-small-spacing: 80px;
+
+$BigTitle : 4.5rem;
+$BigTitle_mobile : 3.2rem;
+$heading1 : 2.8rem;
+$heading1_mobile : 2.1rem;
+$heading2 : 2.2rem;
+$heading3 : 1.55rem;
+$regular-fontsize: 1rem;
+$regular-line: 1.6rem;
+$small-fontsize: 0.87rem;
+$extrasmall-fontsize: 0.56rem;
+
+$size-0 : 10px;
+$size-1 : 15px;
+$size-2 : 25px;
+$size-3 : 35px;
+$size-4 : 45px;
+$size-5 : 55px;
+$size-6 : 65px;
+$size-7 : 75px;
+$size-8 : 85px;
+$size-9 : 95px;
+$size-100: 100px;
+
+$border-radius: 1em;
+
+
+//especificações adicionais responsivos
+//breakpoints
+$android: 414px;
+$mobile: 576px;
+$mobile-1: 667px;
+$tablet: 767px;
+$desktop: 992px;
+$desktop-1: 1024px;
+$desktop-wide: 1200px;
+$desktop-superwide: 1440px;

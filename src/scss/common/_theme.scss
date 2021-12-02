@@ -1,0 +1,199 @@
+
+.logo{
+    & strong, & span {
+        color: $dark;
+        font-size: 1.2rem;
+    }
+    strong{
+        font-weight: 800;
+    }
+    span{
+        font-weight: 300;
+    }
+}
+span.tag{
+    color: white;
+    background: $primary;
+    font-weight: 800!important;
+    & span.thin {
+        font-weight: 300!important;
+    }
+}
+
+i.magnify{
+    @include transitionAll04();
+    &:hover{
+        transform: scale(1.5);
+    }
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    span{
+        font-size: $heading1;
+        font-weight: 300;
+        &.bold{
+            font-weight: 800;
+        }
+    }
+}
+.subtitle{
+    margin-top: $size-3;
+    
+}
+.text{
+    margin-top: $size-3;
+    line-height: $regular-line;
+}
+.gplay{
+    cursor: pointer;
+    margin-top: $size-3;
+    img{
+        width: 34%;
+        max-width: 180px;
+    }
+}
+.gplay-footer{
+    cursor: pointer;
+    margin-top: $size-1;
+    img{
+        width: 54%;
+        max-width: 180px;
+        @include transitionAll04();
+        &:hover{
+            transform: scale(1.3);
+        }
+    }
+}
+//section
+.section{
+    padding-top: $section-spacing;
+    padding-bottom: $section-spacing;
+    padding-left: $section-spacing;
+    padding-right: $section-spacing;
+    &.no-padding {
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+    &.responsive-padding {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    &.small-padding{
+        padding-bottom: $section-small-spacing!important;
+        padding-top: $section-small-spacing!important;
+    }
+}
+.section-tags{
+    display: inline-flex;
+    justify-content: space-evenly;
+    padding-top: $size-6;
+    padding-bottom: $size-6;
+
+    .tag {
+    justify-content: center;
+    & .circle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        background: $primary;
+        border-radius: 50%;
+        width: 92px;
+        height: 92px;
+        margin-bottom: $size-2;
+        cursor: pointer;
+        @include blueshadow();
+            i {
+                color: white;
+                font-size: 1.6em;
+            }
+        }
+    }
+}
+
+.blueshadow{
+    @include blueshadow();
+}
+
+.parallax {
+    /* The image used */
+    // background-image: url("");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mb_parallax_overlay {
+    margin: auto;
+    // background-color: black;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), linear-gradient(0deg, rgba(9, 36, 67, 0.5), rgba(9, 36, 67, 0.5));
+}
+
+.line {
+    width: 100%;
+    display: block;
+    height: 1px;
+    background-color: $text-primary;
+    margin-top: $size-5;
+    margin-bottom: $size-5;
+}
+.footer-container{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.footer-list{
+    color: $gray-2;
+    display: flex;
+    flex-direction: column;
+    margin-top: $size-1;
+    padding-right: $size-1;
+    gap: $size-0;
+    .social-links{
+        margin-top: $size-2;
+        display: flex;
+        gap: $size-0;
+        .social-item{
+            background: $text-primary;
+            // padding: $size-0;
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                color: $gray-2;
+                @include transitionAll04();
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }
+    &.links a{
+        text-decoration: none!important;
+        small{
+            @include transitionAll04();
+            color: $gray-2;
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+}
+
+.institucional{
+    gap: $size-2;
+    display: flex;
+    flex-flow: column;
+}

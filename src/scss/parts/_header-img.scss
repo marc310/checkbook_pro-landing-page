@@ -1,0 +1,51 @@
+
+section {
+    &#header-img{
+        min-height: 80vh;
+        flex-direction: column;
+    }
+}   
+#header-img{
+    @include transitionAll04();
+    // background: $gray-1;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    // background-position: center!important;
+    color: white;
+    display: flex;
+    .mb_parallax_overlay{
+        min-height: inherit;
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        .container{ 
+            display: flex;
+            align-items: center; 
+            flex-grow: 1;
+        }
+        .title-call{
+            display: flex;
+            flex-direction: column;
+            font-weight: 300;
+            span{
+                font-size: $BigTitle;
+                &.subtitle {
+                    font-size: $heading1;
+                }
+            }
+        }
+        .next{
+            display:flex;
+            justify-content: center;
+            padding-bottom: 0.4em;
+            font-size: 2em;
+            & a i{
+                color: white;
+            }
+            & i {
+                cursor: pointer;
+            }
+        }
+    }
+}
+

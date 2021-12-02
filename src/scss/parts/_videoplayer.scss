@@ -1,0 +1,138 @@
+.videoWrapper {
+	width: 100%;
+	height: 500px;
+}
+.videoWrapper {
+	position: relative;
+}
+.video-holder {
+	text-align: center;
+	margin: 0 auto;
+}
+.video{
+	width: 90%;
+	height: 500px;
+	outline: none;
+	object-fit: contain;
+}
+.video-full{
+	width: 100%;
+	height: auto;
+    max-height: 80vh;
+	outline: none;
+	object-fit: contain;
+    display: flex;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+	.video-holder {
+		width: calc(100% - 20px);
+		margin: 0 10px;
+	}	
+	// #spokeVideo{
+    //     width: 100%;
+    //     height: auto;
+	// 	object-fit: contain;
+    // }
+}
+
+
+
+.video-section {
+    .container{
+        display: inline-flex;
+        width: -webkit-fill-available;
+
+        & .title{
+            margin-top: $size-2;
+        }
+
+        .col-expl{
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    .list{
+        display: flex;
+        flex-direction: column;
+        padding-top: $size-5;
+        .item{
+            padding-top: $size-1;
+            padding-bottom: $size-1;
+            display: inline-flex;
+            align-items: center;
+            & i{
+                color: $primary;
+                margin-right: $size-1;
+            }
+            & p{
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+}
+
+
+// lightbox
+#fade {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+  }
+  
+  #light {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 600px;
+    max-height: 360px;
+    margin-left: -300px;
+    margin-top: -180px;
+    border: 2px solid #FFF;
+    background: #FFF;
+    z-index: 1002;
+    overflow: visible;
+  }
+  
+  #boxclose {
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 3px;
+    background: #222222;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    z-index: 1002;
+    opacity: 0.9;
+  }
+  
+  .boxclose:before {
+    content: "x";
+  }
+  
+  #fade:hover ~ #boxclose {
+    display:none;
+  }
+  
+  .test:hover ~ .test2 {
+    display: none;
+  }

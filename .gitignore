@@ -1,0 +1,3 @@
+# Ignore List
+/node_modules
+*.zip

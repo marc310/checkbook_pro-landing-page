@@ -1,0 +1,79 @@
+
+
+.bt{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: $size-0;
+    padding-bottom: $size-0;
+    padding-right: $size-2;
+    padding-left: $size-2;
+    border-radius: $border-radius;
+    border: none;
+    i{
+        margin-right: $size-1;
+    }
+    span{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        font-weight: 700;
+        small {
+            font-weight: 300!important;
+        }
+    }
+}
+
+
+.bt-default {
+    background: $background;
+    color: $text-primary;
+}
+.bt-primary{
+    background: $primary;
+    color: $gray-0;
+    &:hover{
+        background: darken($color: $primary, $amount: 6.5)!important;
+        color: white
+    }
+    &:active{
+        background: $secondary!important;
+    }
+    &.shaded {
+        @include blueshadow();
+    }
+}
+
+#backToTop {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    height: $size-3;
+    width: $size-3;
+    bottom: $size-3;
+    right: $size-3;
+    z-index: 999;
+    font-size: $regular-line;
+    border: none;
+    outline: none;
+    background-color: $primary;
+    color: white;
+    cursor: pointer;
+    padding: $size-0;
+    border-radius: $size-1;
+    @include transitionAll04();
+    & i{
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    &.shaded {
+        @include blueshadow();
+    }
+    &:hover {
+          background-color: darken($color: $primary, $amount: 6.5)!important;
+    }
+  }
+  
