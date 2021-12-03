@@ -44,7 +44,7 @@ i.magnify{
 }
 .text{
     margin-top: $size-3;
-    line-height: $regular-line;
+    // line-height: $regular-line;
 }
 .gplay{
     cursor: pointer;
@@ -60,6 +60,7 @@ i.magnify{
     img{
         width: 54%;
         max-width: 180px;
+        margin-left: -$size-0;
         @include transitionAll04();
         &:hover{
             transform: scale(1.3);

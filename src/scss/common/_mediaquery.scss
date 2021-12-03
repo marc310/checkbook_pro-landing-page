@@ -77,6 +77,47 @@
     
 }
 
+@media (max-width: $desktop-wide) {
+    h1{
+        font-size: $heading1 + 0.2;
+    }
+    h2{
+        font-size: $heading2 + 0.2;
+    }
+    h3{
+        font-size: $heading3 + 0.2;
+    }
+    p{
+        font-size: $regular-fontsize + 0.2;
+    }
+}
+@media (max-width: $desktop-superwide) {
+    h1{
+        font-size: $heading1 + 0.5;
+    }
+    h2{
+        font-size: $heading2 + 0.5;
+    }
+    h3{
+        font-size: $heading3 + 0.5;
+    }
+    p{
+        font-size: $regular-fontsize + 0.5;
+    }
+    #header-img{
+        .mb_parallax_overlay{
+            .title-call{
+                span{
+                    font-size: $BigTitle + 0.8;
+                    &.subtitle {
+                        font-size: $heading1 + 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // *****************************************************
 // min width
 // *****************************************************
@@ -89,7 +130,14 @@
         padding-right: $size-1;
         padding-left: $size-1;
     }
-    
+    .gplay{
+        cursor: pointer;
+        margin-top: $size-3;
+        img{
+            width: 65%;
+            max-width: 220px;
+        }
+    }
 }
 
 
@@ -157,6 +205,18 @@
             padding-left: $section-spacing!important;
             padding-right: $section-spacing!important;
         }
+    }
+    h1{
+        font-size: $heading1 + 0.7;
+    }
+    h2{
+        font-size: $heading2 + 0.7;
+    }
+    h3{
+        font-size: $heading3 + 0.7;
+    }
+    p{
+        font-size: $regular-fontsize + 0.7;
     }
 }
     

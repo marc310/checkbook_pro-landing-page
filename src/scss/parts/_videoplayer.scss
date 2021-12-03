@@ -10,8 +10,8 @@
 	margin: 0 auto;
 }
 .video{
-	width: 90%;
-	height: 500px;
+	width: 100%;
+	// height: 500px;
 	outline: none;
 	object-fit: contain;
 }
@@ -29,7 +29,10 @@
 	.video-holder {
 		width: calc(100% - 20px);
 		margin: 0 10px;
-	}	
+	}
+    .video {
+        height: auto;
+    }	
 	// #spokeVideo{
     //     width: 100%;
     //     height: auto;
@@ -135,4 +138,36 @@
   
   .test:hover ~ .test2 {
     display: none;
+  }
+
+  .play-button {
+    background-color: $primary;
+    padding: $size-0;
+    width: $size-5;
+    height: $size-5;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 98;
+    opacity: 1;
+    @include transitionAll04;
+    &.float {
+        position: absolute;
+        top: 45%;
+        left: 45%;
+    }
+    &:hover{
+        -webkit-animation: heartBeat 1s infinite alternate;
+        animation: heartBeat 1s infinite alternate;
+    }
+    &.shaded {
+        @include blueshadow();
+    }
+    & i{
+        color: white;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        flex-grow: 1;
+        
+    }
   }

@@ -32,3 +32,25 @@ var menu_chk = document.getElementById('show-menu');
 element.addEventListener('click', () => {
     let menu_state = menu_chk.checked == false ? false : menu_chk.checked = false;
 }); 
+
+// play video
+var playVideo = (e)=>{
+    let id = e.target.parentNode.id
+    let button = document.getElementById(id);
+    let video = e.target.parentNode.nextElementSibling.id;
+    // console.log(e.target.parentNode.nextElementSibling.id)
+    button.style.display = 'none';
+    document.getElementById(video).play();
+}
+
+document.getElementById('spokeVideo').addEventListener('ended',showButton,false);
+function showButton() {
+    play_button = document.getElementById('spokeVideoPlay');
+    play_button.style.display = 'flex';
+}
+document.getElementById('rightToolsVideo').addEventListener('ended',showButton,false);
+function showButton() {
+    play_button = document.getElementById('rightToolsVideoPlay');
+    play_button.style.display = 'flex';
+}
+

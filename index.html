@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <nav id="menu" class="main-menu animated bounceInDown">
+    <nav id="menu" class="main-menu animate__animated animate__bounceInDown">
         <label for="show-menu" class="show-menu">
             <div class="topbar">
                 <span class="logo mobile-logo">
@@ -48,10 +48,10 @@
     </nav>
 
 
-    <section id="header-img" class="parallax" style="background-image: url('../src/images/background-img.jpg');">
+    <section id="header-img" class="parallax" style="background-image: url('./src/images/background-img.jpg');">
            <div class="mb_parallax_overlay">
                <div class="container">
-                   <div class="title-call animated fadeInLeft">
+                   <div class="title-call animate__animated animate__fadeInLeft">
                        <span>A <strong>Dollar Tracked</strong></span>
                        <span>is a dollar <span class="tag">Saved</span></span>
                        <span class="subtitle mt-4">End Accounting Chaos</span>
@@ -64,7 +64,7 @@
                    </div>
        
                </div>
-               <div class="next animated zoomInDown">
+               <div class="next animate__animated animate__zoomInDown">
                    <a href="#about">
                        <i class="fas fa-chevron-down magnify"></i>
                    </a>
@@ -132,7 +132,10 @@
                 <!-- videoplayer -->
                 <div class="videoWrapper">
                     <div id="spokeVideoHolder" class="video-holder">
-                        <video id="spokeVideo" class="video" controls playsinline poster="./src/images/spokevideo-preview.jpg">
+                        <div id="spokeVideoPlay" class="play-button d-flex float shaded" onclick="playVideo(event)">
+                            <i class="fa fa-play"></i>
+                        </div>
+                        <video id="spokeVideo" class="video" playsinline poster="./src/images/spokevideo-preview.jpg">
                             <source id="webm" src="./src/video/Spokevideo.webm" type="video/webm">
                         </video>
                     </div>
@@ -192,7 +195,7 @@
 
     <!-- img parallax section -->
     <section id="money_go" class="section no-padding" >
-        <div class="parallax" style="background-image: url('../src/images/money_go.jpg')">
+        <div class="parallax" style="background-image: url('./src/images/money_go.jpg')">
             <div class="mb_parallax_overlay section small-padding">
                 <div class="container text-center to-center text-white">
                     <div class="title">
@@ -243,7 +246,10 @@
                 <!-- videoplayer -->
                 <div class="videoWrapper">
                     <div id="videoHolder" class="video-holder">
-                        <video id="rightToolsVideo" class="video" controls poster="./src/images/spokevideo-preview.jpg">
+                        <div id="rightToolsVideoPlay" class="play-button d-flex float shaded" onclick="playVideo(event)">
+                            <i class="fa fa-play"></i>
+                        </div>
+                        <video id="rightToolsVideo" class="video" playsinline poster="./src/images/spokevideo-preview.jpg">
                             <source id="webm" src="./src/video/Spokevideo.webm" type="video/webm">
                         </video>
                     </div>
@@ -421,8 +427,8 @@
 <!-- jquery import -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- autoplay video plugins -->
-<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<!-- <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script> -->
+<!-- <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script> -->
 <!-- global js functions -->
 <script src="./src/js/global.js"></script>
 
@@ -447,20 +453,20 @@ $(document).ready(function(){
 });
 
 // plugins to autoplay video based on viewport
-var videoElem = document.getElementsByClassName("video");
+// var videoElem = document.getElementsByClassName("video");
 
-for (var i = 0; i < videoElem.length; i++) {
-   let videoInstance = videoElem[i].id;
-   // more instances created based on videos by class
-   let instance = document.getElementById(videoInstance);
-   gsap.registerPlugin(ScrollTrigger);
-     ScrollTrigger.create({
-       trigger: instance,
-       onEnter: () => instance.play(),
-       onEnterBack: () => instance.play(),
-       onLeave: () => instance.pause(),
-       onLeaveBack: () => instance.pause(),
-     });
-}
+// for (var i = 0; i < videoElem.length; i++) {
+//    let videoInstance = videoElem[i].id;
+//    // more instances created based on videos by class
+//    let instance = document.getElementById(videoInstance);
+//    gsap.registerPlugin(ScrollTrigger);
+//      ScrollTrigger.create({
+//        trigger: instance,
+//        onEnter: () => instance.play(),
+//        onEnterBack: () => instance.play(),
+//        onLeave: () => instance.pause(),
+//        onLeaveBack: () => instance.pause(),
+//      });
+// }
 
 </script>

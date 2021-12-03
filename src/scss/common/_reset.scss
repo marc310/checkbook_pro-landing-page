@@ -7,7 +7,7 @@ html{
 }
 body {
     font-family: 'Open Sans';
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: $text-primary;
     strong { font-weight: 800; }
 }
@@ -56,6 +56,19 @@ p{
 }
 .line-h3{
     line-height: $heading3;
+}
+
+.f-size-1{
+    font-size: $heading1;
+}
+.f-size-2{
+    font-size: $heading2;
+}
+.f-size-3{
+    font-size: $heading3;
+}
+.f-size-4{
+    font-size: $BigTitle_mobile;
 }
 
 .text-center{
