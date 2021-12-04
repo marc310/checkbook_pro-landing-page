@@ -9608,7 +9608,8 @@ i.magnify {
   transition: all 0.4s ease 0s; }
   .gplay img {
     width: 34%;
-    max-width: 180px; }
+    max-width: 220px;
+    min-width: 150px; }
   .gplay:hover {
     transform: scale(1.3); }
 
@@ -9617,7 +9618,8 @@ i.magnify {
   margin-top: 15px; }
   .gplay-footer img {
     width: 54%;
-    max-width: 180px;
+    max-width: 220px;
+    min-width: 150px;
     margin-left: -10px;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
@@ -9785,6 +9787,11 @@ i.magnify {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; }
+
+.mockup-receipt-scanner img {
+  width: 100%;
+  margin-top: -55px;
+  z-index: -1; }
 
 .bt {
   cursor: pointer;
@@ -10441,6 +10448,64 @@ ul.list-reset {
 .slick-arrow.slick-hidden {
   display: none; }
 
+/* Floating Social Media Bar Style Starts Here */
+.fl-fl {
+  background: #1B36B9;
+  border-radius: 1em 0 0 1em;
+  letter-spacing: 3px;
+  cursor: pointer;
+  padding: 4px;
+  width: 220px;
+  position: fixed;
+  right: -180px;
+  z-index: 999;
+  font: normal normal 10px Arial;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease; }
+
+.fl-fl:hover {
+  right: 0; }
+  .fl-fl:hover.shaded {
+    /* Primary */
+    background: #1B36B9;
+    /* color-shadow:primary */
+    box-shadow: 0px 80px 80px rgba(27, 54, 185, 0.15), 0px 41.7776px 33.4221px rgba(27, 54, 185, 0.107828), 0px 22.3363px 17.869px rgba(27, 54, 185, 0.0894161), 0px 12.5216px 10.0172px rgba(27, 54, 185, 0.075), 0px 6.6501px 5.32008px rgba(27, 54, 185, 0.0605839), 0px 2.76726px 2.21381px rgba(27, 54, 185, 0.0421718);
+    z-index: 1000; }
+
+.fl-fl a {
+  color: #fff !important;
+  text-decoration: none;
+  text-align: center;
+  line-height: 43px !important;
+  vertical-align: top !important;
+  display: flex;
+  align-items: center; }
+  .fl-fl a i {
+    font-size: 1rem;
+    padding: 0.66rem; }
+
+.float-1 {
+  top: 160px; }
+
+.float-2 {
+  top: 215px; }
+
+.float-3 {
+  top: 270px; }
+
+.float-4 {
+  top: 325px; }
+
+.float-5 {
+  top: 380px; }
+
+.float-6 {
+  top: 435px; }
+
+/* Floating Social Media Bar Style Ends Here */
 @media (max-width: 667px) {
   .section {
     padding-right: 15px !important;
