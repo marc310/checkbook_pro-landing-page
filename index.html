@@ -31,11 +31,11 @@
                 </li>
                 <div class="menu-links" id="menu_links">
                         <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Download Checkbook Pro</a>		</li>
-                        <li><a href="#">Buy a License</a>		</li>
-                        <li><a href="template/how-to-use.html">How to Use a Checkbook Pro</a></li>
+                        <li><a href="https://checkbookpro.s3.us-east-2.amazonaws.com/CheckbookPro.msi">Download Checkbook Pro</a>		</li>
+                        <li><a href="https://order.shareit.com/cart/new?vendorid=200288303&PRODUCT[301015988]=1&cartcoupon=1&backlink=https%3A%2F%2Fcheckbook.pro%2Fthankyou.html">Buy a License</a>		</li>
+                        <li><a href="template/guide.html">How to Use a Checkbook Pro</a></li>
                         <li>
-                            <a href="#companion_software" class="button bt bt-primary shaded">
+                            <a href="https://play.google.com/store/apps/details?id=com.us.jk.receiptscanner" target="_blank" class="button bt bt-primary shaded">
                                 <i class="fab fa-google-play"></i>
                                 <span>
                                     Receipt Scanner
@@ -47,7 +47,7 @@
             </ul>
     </nav>
 
-
+    <!-- header img  -->
     <section id="header-img" class="parallax" style="background-image: url('./src/images/background-img.jpg');">
            <div class="mb_parallax_overlay">
                <div class="container">
@@ -56,10 +56,12 @@
                        <span>is a dollar <span class="tag">Saved</span></span>
                        <span class="subtitle mt-4">End Accounting Chaos</span>
                        <span>
-                           <button class="bt bt-primary shaded mt-5">
-                               <i class="fas fa-download"></i>
-                               Download Now
-                           </button>
+                           <a href="https://checkbookpro.s3.us-east-2.amazonaws.com/CheckbookPro.msi">
+                               <button class="bt bt-primary shaded mt-5">
+                                   <i class="fas fa-download"></i>
+                                   Download Now
+                               </button>
+                           </a>
                        </span>
                    </div>
        
@@ -71,6 +73,7 @@
                </div>
            </div>
     </section>
+    <!-- header img  -->
 
     <section id="about" class="section">
         <div class="container text-center to-center">
@@ -88,10 +91,12 @@
                     <div class="col-auto f-grow">
                         <!-- tag item -->
                         <div class="tag">
-                            <div class="circle">
-                                <i class="fas fa-chalkboard-teacher  magnify"></i>
-                            </div>
-                            <h3 class="bold">Learn to Use</h3>
+                            <a href="guide.html">
+                                <div class="circle">
+                                    <i class="fas fa-chalkboard-teacher  magnify"></i>
+                                </div>
+                            </a>
+                            <h3 class="bold">How to Use</h3>
                         </div>
                         <!-- tag item -->
                     </div>
@@ -99,9 +104,11 @@
                     <div class="col-auto f-grow">
                         <!-- tag item -->
                         <div class="tag">
-                            <div class="circle">
-                                <i class="fas fa-cloud-download-alt  magnify"></i>
-                            </div>
+                            <a href="https://checkbookpro.s3.us-east-2.amazonaws.com/CheckbookPro.msi">
+                                <div class="circle">
+                                    <i class="fas fa-cloud-download-alt  magnify"></i>
+                                </div>
+                            </a>
                             <h3 class="bold">Download</h3>
                             <small class="text-gray">Software Avaliable for Windows PC</small>
                         </div>
@@ -111,9 +118,11 @@
                     <div class="col-auto f-grow">
                         <!-- tag item -->
                         <div class="tag">
-                            <div class="circle">
-                                <i class="fas fa-key  magnify"></i>
-                            </div>
+                            <a href="https://order.shareit.com/cart/new?vendorid=200288303&PRODUCT[301015988]=1&cartcoupon=1&backlink=https%3A%2F%2Fcheckbook.pro%2Fthankyou.html" target="_blank">
+                                <div class="circle">
+                                    <i class="fas fa-key  magnify"></i>
+                                </div>
+                            </a>
                             <h3 class="bold">Buy a License</h3>
                         </div>
                         <!-- tag item -->
@@ -133,6 +142,9 @@
                     <!-- videoplayer -->
                     <div class="videoWrapper">
                         <div id="spokeVideoHolder" class="video-holder">
+                            <button id="bt_mute" class="bt bt-default bt-mute" onclick="muteVideo()">
+                                <i id="audioBtn" class="fa fa-volume-up"></i>
+                            </button>
                             <div id="spokeVideoPlay" class="play-button d-flex float shaded" onclick="playVideo(event)">
                                 <i class="fa fa-play"></i>
                             </div>
@@ -245,20 +257,17 @@
     <!-- video section -->
     <section id="right_tools" class="section video-section responsive-padding">
         <div class="container">
-            <!-- col -->
+           <div class="row">
+                <!-- col -->
             <div class="col-lg-6 col-sm-12 f-grow">
-                <!-- videoplayer -->
-                <div class="videoWrapper">
-                    <div id="videoHolder" class="video-holder">
-                        <div id="rightToolsVideoPlay" class="play-button d-flex float shaded" onclick="playVideo(event)">
-                            <i class="fa fa-play"></i>
-                        </div>
-                        <video id="rightToolsVideo" class="video" playsinline poster="./src/images/spokevideo-preview.jpg">
-                            <source id="webm" src="./src/video/Spokevideo.webm" type="video/webm">
-                        </video>
-                    </div>
+                <!-- screenshot -->
+                <div class="screenshot">
+                    <img src="./src/images/mockup_app.png" alt="">
+                    <a href="https://checkbookpro.s3.us-east-2.amazonaws.com/CheckbookPro.msi">
+                        <img src="./src/images/badge-windows.png" alt="">
+                    </a>
                 </div>
-                <!-- videoplayer -->
+                <!-- screenshot -->
             </div>
             <!-- col -->
             <!-- col -->
@@ -276,12 +285,13 @@
                             Whether you are a fresh graduate making $20,000 a year or a seasoned professional making $400,000 a year, financial success comes down to having the right tool to keep track of income and expenses.
                         </p>
                         <p>
-                            CHECKBOOK PRO is this key tool. You will not find another accounting software that is more intuitive and user friendly <a href="#">Download Checkbook Pro</a>
+                            CHECKBOOK PRO is this key tool. You will not find another accounting software that is more intuitive and user friendly <a href="https://checkbookpro.s3.us-east-2.amazonaws.com/CheckbookPro.msi">Download Checkbook Pro</a>
                         </p>
                     </div>
                 </div>
             </div>
             <!-- col -->
+           </div>
         </div>
     </section>
     <!-- video section -->
@@ -302,7 +312,7 @@
             </div>
             <div class="text text-gray companion_software_text">
                 <p>
-                    The Receipt Scanner app helps you scan your receipts at rocket speed using your Android phone and then transfer it all to your computer. <a href="#">You can download it HERE.</a>
+                    The Receipt Scanner app helps you scan your receipts at rocket speed using your Android phone and then transfer it all to your computer. <a href="https://checkbookpro.s3.us-east-2.amazonaws.com/CheckbookPro.msi">You can download it HERE.</a>
                 </p>
                 <div class="gplay">
                     <a href="https://play.google.com/store/apps/details?id=com.us.jk.receiptscanner" target="_blank">
@@ -363,10 +373,13 @@
                         <p class="bold">Checkbook</p>
                     </div>
                     <div class="footer-list links text-gray2">
-                        <a href="template/how-to-use.html">
+                        <a href="guide.html">
                             <small>How to Use</small>
                         </a>
-                        <a href="#">
+                        <a href="https://order.shareit.com/cart/new?vendorid=200288303&PRODUCT[301015988]=1&cartcoupon=1&backlink=https%3A%2F%2Fcheckbook.pro%2Fthankyou.html">
+                            <small>Buy a License</small>
+                        </a>
+                        <a href="mailto:service@checkbook.pro">
                             <small>Support</small>
                         </a>
                         <a href="#">
@@ -382,13 +395,13 @@
                         <p class="bold">Help Center</p>
                     </div>
                     <div class="footer-list links text-gray2">
-                        <a href="template/text-page.html">
+                        <a href="guide.html">
                             <small>Frequently Asked Questions</small>
                         </a>
-                        <a href="template/terms_and_service.html">
+                        <a href="terms.html">
                             <small>Terms and Service</small>
                         </a>
-                        <a href="template/privacy_policy.html">
+                        <a href="privacy.html">
                             <small>Privacy Policy</small>
                         </a>
                         
@@ -401,7 +414,7 @@
                         <p class="bold">Download</p>
                     </div>
                     <div class="footer-list links text-gray2">
-                        <a href="#">
+                        <a href="https://checkbookpro.s3.us-east-2.amazonaws.com/CheckbookPro.msi">
                             <small>Checkbook Pro for Windows PC</small>
                         </a>
                         <a href="https://play.google.com/store/apps/details?id=com.us.jk.receiptscanner" target="_blank">
@@ -456,21 +469,25 @@ $(document).ready(function(){
   });
 });
 
-// plugins to autoplay video based on viewport
-// var videoElem = document.getElementsByClassName("video");
-
-// for (var i = 0; i < videoElem.length; i++) {
-//    let videoInstance = videoElem[i].id;
-//    // more instances created based on videos by class
-//    let instance = document.getElementById(videoInstance);
-//    gsap.registerPlugin(ScrollTrigger);
-//      ScrollTrigger.create({
-//        trigger: instance,
-//        onEnter: () => instance.play(),
-//        onEnterBack: () => instance.play(),
-//        onLeave: () => instance.pause(),
-//        onLeaveBack: () => instance.pause(),
-//      });
-// }
-
+// $("video").prop('muted', true);
+//     if( $("video").prop('muted') ) {
+//       $("video").prop('muted', false);
+//       $('.btn').removeClass('mute');
+//       $('.btn').addClass('unmute');
+//     } else {
+//       $("video").prop('muted', true);
+//       $('.btn').removeClass('unmute');
+//       $('.btn').addClass('mute');
+//     }
+//   $(".btn").click( function (){
+//     if( $("video").prop('muted') ) {
+//       $("video").prop('muted', false);
+//       $('.btn').removeClass('mute');
+//       $('.btn').addClass('unmute');
+//     } else {
+//       $("video").prop('muted', true);
+//       $('.btn').removeClass('unmute');
+//       $('.btn').addClass('mute');
+//     }
+//   });
 </script>

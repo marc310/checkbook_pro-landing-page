@@ -198,3 +198,20 @@ i.magnify{
     display: flex;
     flex-flow: column;
 }
+
+
+.screenshot{
+    display: flex;
+    flex-flow: column;
+    a{
+        margin-top: $size-1;
+        align-self: center;
+        img{
+            max-height: 50px;
+            width: auto;
+        }
+    }
+    img {
+        width: 100%;
+    }
+}
