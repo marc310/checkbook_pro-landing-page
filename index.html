@@ -33,7 +33,7 @@
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="https://checkbookpro.s3.us-east-2.amazonaws.com/CheckbookPro.msi">Download Checkbook Pro</a>		</li>
                         <li><a href="https://order.shareit.com/cart/new?vendorid=200288303&PRODUCT[301015988]=1&cartcoupon=1&backlink=https%3A%2F%2Fcheckbook.pro%2Fthankyou.html">Buy a License</a>		</li>
-                        <li><a href="template/guide.html">How to Use a Checkbook Pro</a></li>
+                        <li><a href="guide.html">How to Use a Checkbook Pro</a></li>
                         <li>
                             <a href="https://play.google.com/store/apps/details?id=com.us.jk.receiptscanner" target="_blank" class="button bt bt-primary shaded">
                                 <i class="fab fa-google-play"></i>
@@ -254,7 +254,7 @@
         </div>
     </section>
 
-    <!-- video section -->
+    <!-- screenshot section -->
     <section id="right_tools" class="section video-section responsive-padding">
         <div class="container">
            <div class="row">
@@ -262,8 +262,10 @@
             <div class="col-lg-6 col-sm-12 f-grow">
                 <!-- screenshot -->
                 <div class="screenshot">
-                    <img src="./src/images/mockup_app.png" alt="">
-                    <a href="https://checkbookpro.s3.us-east-2.amazonaws.com/CheckbookPro.msi">
+                    <a href="#screenshot-preview">
+                        <img src="./src/images/mockup_app.png" alt="">
+                    </a>
+                    <a class="badge" href="https://checkbookpro.s3.us-east-2.amazonaws.com/CheckbookPro.msi">
                         <img src="./src/images/badge-windows.png" alt="">
                     </a>
                 </div>
@@ -294,7 +296,14 @@
            </div>
         </div>
     </section>
-    <!-- video section -->
+
+<!-- lightbox container hidden with CSS -->
+<a href="#right_tools" class="lightbox" id="screenshot-preview">
+    <span style="background-image: url('./src/images/screenshot.png')"></span>
+</a>
+
+  
+    <!-- screenshot section -->
 
 
     <section id="companion_software" class="section">
