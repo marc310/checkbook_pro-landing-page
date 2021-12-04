@@ -50,6 +50,7 @@
     }
 }
 
+// 1024
 @media (max-width: $desktop-1){
     .video-section {
         .container{
@@ -78,32 +79,10 @@
 }
 
 @media (max-width: $desktop-wide) {
-    h1{
-        font-size: $heading1 + 0.2;
-    }
-    h2{
-        font-size: $heading2 + 0.2;
-    }
-    h3{
-        font-size: $heading3 + 0.2;
-    }
-    p{
-        font-size: $regular-fontsize + 0.2;
-    }
+   
 }
 @media (max-width: $desktop-superwide) {
-    h1{
-        font-size: $heading1 + 0.5;
-    }
-    h2{
-        font-size: $heading2 + 0.5;
-    }
-    h3{
-        font-size: $heading3 + 0.5;
-    }
-    p{
-        font-size: $regular-fontsize + 0.5;
-    }
+    
     #header-img{
         .mb_parallax_overlay{
             .title-call{
@@ -121,6 +100,26 @@
 // *****************************************************
 // min width
 // *****************************************************
+//414
+@media (min-width: $android){
+    .sidevideo-container{
+        padding-right: $size-1;
+        padding-left: $size-1;
+    }
+    #header-img{
+        .mb_parallax_overlay{
+            .title-call{
+                span{
+                    font-size: $BigTitle - 0.4;
+                    &.subtitle {
+                        font-size: $heading1 - 0.4;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // 576
 @media (min-width: $mobile) {
     .container, .container-sm {
@@ -138,6 +137,22 @@
             max-width: 220px;
         }
     }
+    .sidevideo-container{
+        padding-right: $size-5;
+        padding-left: $size-5;
+    }
+    #header-img{
+        .mb_parallax_overlay{
+            .title-call{
+                span{
+                    font-size: $BigTitle - 0.3;
+                    &.subtitle {
+                        font-size: $heading1 - 0.3;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -146,6 +161,29 @@
     .container, .container-sm, .container-md {
         max-width: 100%; 
     } 
+    .main-menu{
+        .menu-links{
+            padding-right: 0;
+            li {
+                margin-top: $size-1;
+            }
+        }
+        .logo{
+            padding-left: 0;
+        }
+    }
+    #header-img{
+        .mb_parallax_overlay{
+            .title-call{
+                span{
+                    font-size: $BigTitle - 0.2;
+                    &.subtitle {
+                        font-size: $heading1 - 0.2;
+                    }
+                }
+            }
+        }
+    }
 }
  
 // 992
@@ -157,26 +195,53 @@
         padding-right: $size-3;
         padding-left: $size-3;
     }
+    .main-menu{
+        .menu-links{
+            padding-right: 0;
+            li a {
+                font-size: $small-fontsize;
+            }
+        }
+        .logo{
+            padding-left: 0;
+        }
+    }
+    #header-img{
+        .mb_parallax_overlay{
+            .title-call{
+                span{
+                    font-size: $BigTitle;
+                    &.subtitle {
+                        font-size: $heading1;
+                    }
+                }
+            }
+        }
+    }
 }
  
-// // 1200
-// @media (min-width: $desktop-wide) {
-//     .container, .container-sm, .container-md, .container-lg, .container-xl {
-//       max-width: 1140px; 
-//     } 
-//     .container {
-//         padding-right: $size-4;
-//         padding-left: $size-4;
-//     }
-//     .section{
-//         &.responsive-padding{
-//             padding-left: $section-spacing!important;
-//             padding-right: $section-spacing!important;
-//         }
-//     }
-// }
 // 1200
 @media (min-width: $desktop-wide) {
+    #header-img{
+        .mb_parallax_overlay{
+            .title-call{
+                span{
+                    font-size: $BigTitle + 0.2;
+                    &.subtitle {
+                        font-size: $heading1 + 0.2;
+                    }
+                }
+            }
+        }
+    }
+    .main-menu{
+        .menu-links{
+            padding-right: $size-4 + 15px;
+        }
+        .logo{
+            padding-left: $size-4;
+        }
+    }
     .container, .container-sm, .container-md, .container-lg, .container-xl {
       max-width: 100%; 
     } 
@@ -190,15 +255,35 @@
             padding-right: $section-small-spacing!important;
         }
     }
+    h1{
+        font-size: $heading1 + 0.2;
+    }
+    h2{
+        font-size: $heading2 + 0.2;
+    }
+    h3{
+        font-size: $heading3 + 0.2;
+    }
+    p{
+        font-size: $regular-fontsize + 0.2;
+    }
 }
 // 1440
 @media (min-width: $desktop-superwide) {
+    .main-menu{
+        .menu-links{
+            padding-right: $size-6 + 15px;
+        }
+        .logo{
+            padding-left: $size-6;
+        }
+    }
     .container, .container-sm, .container-md, .container-lg, .container-xl {
       max-width: 100%; 
     } 
     .container {
-        padding-right: $size-4;
-        padding-left: $size-4;
+        padding-right: $size-6;
+        padding-left: $size-6;
     }
     .section{
         &.responsive-padding{
@@ -206,17 +291,65 @@
             padding-right: $section-spacing!important;
         }
     }
+    #header-img{
+        .mb_parallax_overlay{
+            .title-call{
+                span{
+                    font-size: $BigTitle + 0.5;
+                    &.subtitle {
+                        font-size: $heading1 + 0.5;
+                    }
+                }
+            }
+        }
+    }
     h1{
-        font-size: $heading1 + 0.7;
+        font-size: $heading1 + 0.5;
     }
     h2{
-        font-size: $heading2 + 0.7;
+        font-size: $heading2 + 0.5;
     }
     h3{
-        font-size: $heading3 + 0.7;
+        font-size: $heading3 + 0.5;
     }
     p{
-        font-size: $regular-fontsize + 0.7;
+        font-size: $regular-fontsize + 0.5;
     }
+}
+
+// 1920
+@media (min-width: $desktop-superwide){
+    $aditional-superwide-size: 0.7;
+    .container {
+        padding-right: $size-9;
+        padding-left: $size-9;
+    } 
+    #header-img{
+        .mb_parallax_overlay{
+            .title-call{
+                span{
+                    font-size: $BigTitle + $aditional-superwide-size;
+                    &.subtitle {
+                        font-size: $heading1 + $aditional-superwide-size;
+                    }
+                }
+            }
+        }
+    }
+    button{
+        font-size: $regular-fontsize + $aditional-superwide-size;
+    }
+    h1{
+        font-size: $heading1 + $aditional-superwide-size;
+    }
+    h2{
+        font-size: $heading2 + $aditional-superwide-size;
+    }
+    h3{
+        font-size: $heading3 + $aditional-superwide-size;
+    }
+    p{
+        font-size: $regular-fontsize + $aditional-superwide-size;
+    } 
 }
     

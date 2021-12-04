@@ -90,7 +90,6 @@ i.magnify{
     display: inline-flex;
     justify-content: space-evenly;
     padding-top: $size-6;
-    padding-bottom: $size-6;
 
     .tag {
     justify-content: center;
@@ -146,10 +145,10 @@ i.magnify{
     margin-top: $size-5;
     margin-bottom: $size-5;
 }
-.footer-container{
-    display: flex;
-    flex-direction: row;
-
+#footer{
+    .title {
+        padding-left: $size-1;
+    }
 }
 
 .footer-list{
@@ -157,6 +156,7 @@ i.magnify{
     display: flex;
     flex-direction: column;
     margin-top: $size-1;
+    padding-left: $size-1;
     padding-right: $size-1;
     gap: $size-0;
     .social-links{

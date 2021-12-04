@@ -96,8 +96,8 @@
                         <div id="rightToolsVideoPlay" class="play-button d-flex float shaded" onclick="playVideo(event)">
                             <i class="fa fa-play"></i>
                         </div>
-                        <video id="rightToolsVideo" class="video" playsinline poster="../src/images/spokevideo-preview.jpg">
-                            <source id="webm" src="../src/video/Spokevideo.webm" type="video/webm">
+                        <video id="rightToolsVideo" class="video" playsinline poster="./src/images/spokevideo-preview.jpg">
+                            <source id="webm" src="./src/video/Spokevideo.webm" type="video/webm">
                         </video>
                     </div>
                 </div>
@@ -106,20 +106,22 @@
             <!-- col -->
             <!-- col -->
             <div class="col-lg-6 col-sm-12 f-grow">
-                <div class="title mb-4">
-                    <span>
-                        Success in life depends on
-                        choosing the <span class="tag">Right Tools</span>
-                        for the Right <span class="tag">Task</span>
-                    </span>
-                </div>
-                <div class="text">
-                    <p class=" mb-4">
-                        Whether you are a fresh graduate making $20,000 a year or a seasoned professional making $400,000 a year, financial success comes down to having the right tool to keep track of income and expenses.
-                    </p>
-                    <p>
-                        CHECKBOOK PRO is this key tool. You will not find another accounting software that is more intuitive and user friendly <a href="#">Download Checkbook Pro</a>
-                    </p>
+                <div class="sidevideo-container">
+                    <div class="title mb-4">
+                        <span>
+                            Success in life depends on
+                            choosing the <span class="tag">Right Tools</span>
+                            for the Right <span class="tag">Task</span>
+                        </span>
+                    </div>
+                    <div class="text text-gray">
+                        <p class=" mb-4">
+                            Whether you are a fresh graduate making $20,000 a year or a seasoned professional making $400,000 a year, financial success comes down to having the right tool to keep track of income and expenses.
+                        </p>
+                        <p>
+                            CHECKBOOK PRO is this key tool. You will not find another accounting software that is more intuitive and user friendly <a href="#">Download Checkbook Pro</a>
+                        </p>
+                    </div>
                 </div>
             </div>
             <!-- col -->
@@ -271,56 +273,15 @@
 </body>
 </html>
 
-<!-- jquery import -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- autoplay video plugins -->
-<!-- <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script> -->
-<!-- <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script> -->
 <!-- global js functions -->
 <script src="../src/js/global.js"></script>
 
 <script>
-// jquery for smooth scroll
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (300) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 300, function(){
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-
-// // plugins to autoplay video based on viewport
-// var videoElem = document.getElementsByClassName("video");
-
-// for (var i = 0; i < videoElem.length; i++) {
-//    let videoInstance = videoElem[i].id;
-//    // more instances created based on videos by class
-//    let instance = document.getElementById(videoInstance);
-//    gsap.registerPlugin(ScrollTrigger);
-//      ScrollTrigger.create({
-//        trigger: instance,
-//        onEnter: () => instance.play(),
-//        onEnterBack: () => instance.play(),
-//        onLeave: () => instance.pause(),
-//        onLeaveBack: () => instance.pause(),
-//      });
-// }
 
 document.getElementById('videoTutorial').addEventListener('ended',showButton,false);
 function showButton() {
     play_button = document.getElementById('videoTutorialPlay');
     play_button.style.display = 'flex';
 }
-
 
 </script>

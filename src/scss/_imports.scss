@@ -8,12 +8,11 @@
 
 @import "common/fonts";
 @import "common/mixins";
+@import "common/spacing";
 @import "common/reset";
 @import "common/animations";
-@import "common/spacing";
 @import "common/icons";
 @import "common/theme";
-@import "common/mediaquery";
 
 @import "parts/buttons";
 @import "parts/menu";
@@ -21,6 +20,7 @@
 @import "parts/videoplayer";
 @import "parts/explanation";
 
+@import "common/mediaquery";
 // @import "common/preloader";
 
 // @import "build/scss/AdminLTE.scss";

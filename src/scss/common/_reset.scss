@@ -13,7 +13,7 @@ body {
 }
 footer{
     background: $dark;
-    padding-top: $size-100;
+    padding-top: $size-5;
     padding-bottom: $size-5;
 }
 section {
@@ -22,7 +22,9 @@ section {
     // width: 100vw;
     transform-style: inherit;
 }
-
+button{
+    font-size: $regular-fontsize;
+}
 a{
     @include transitionAll04();
     &:hover{
