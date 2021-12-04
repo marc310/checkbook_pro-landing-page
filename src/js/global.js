@@ -1,4 +1,194 @@
 
+(function ($) {
+  // Config OWL2
+    // Config Slick
+    var slickClass = $('.js-slick');
+    slickClass.each(function () {
+        var option = {
+            accessibility: true,
+            adaptiveheight: false,
+            autoplay: false,
+            autoplayspeed: 5000,
+            arrows: false,
+            asnavfor: null,
+            appendarrows: $(this),
+            appenddots: $(this),
+            prevarrow: '<button type="button" class="slick-prev">Previous</button>',
+            nextarrow: '<button type="button" class="slick-next">Next</button>',
+            centermode: false,
+            centerpadding: '50px',
+            cssease: 'ease',
+            dots: false,
+            dotsclass: 'slick-dots',
+            draggable: true,
+            fade: false,
+            speed: 500,
+            pauseonhover: false,
+            lg: 1, md: this.lg, sm: this.md, xs: this.sm,
+            vertical: false,
+            loop: true,
+            thumb: false
+
+        };
+
+        for (var k in option) {
+            if (option.hasOwnProperty(k)) {
+                if ($(this).attr('data-slick-' + k) != null) {
+                    option[k] = $(this).data('slick-' + k);
+                }
+            }
+        }
+
+        if (option.thumb)
+            $(this).slick({
+                accessibility: option.accessibility,
+                adaptiveHeight: option.adaptiveheight,
+                autoplay: option.autoplay,
+                autoplaySpeed: option.autoplayspeed,
+                arrows: option.arrows,
+                asNavFor: option.asnavfor,
+                appendArrows: option.appendarrows,
+                appendDots: option.appenddots,
+                prevArrow: option.prevarrow,
+                nextArrow: option.nextarrow,
+                centerMode: option.centermode,
+                centerPadding: option.centerpadding,
+                cssease: option.cssease,
+                dots: option.dots,
+                dotsClass: option.dotsclass,
+                draggable: option.draggable,
+                pauseOnHover: option.pauseonhover,
+                fade: option.fade,
+                vertical: option.vertical,
+                slidesToShow: option.lg,
+                infinite: option.loop,
+                swipeToSlide: true,
+                customPaging: function(slick, index) {
+                    var portrait = $(slick.$slides[index]).data('thumb');
+                    return '<img src=" ' + portrait + ' "/><div class="bg-overlay"></div>';
+                },
+
+                responsive: [
+                    {
+                        breakpoint: 1600,
+                        settings: {
+                            slidesToShow: option.lg
+                        }
+                    },
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: option.md
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: option.md
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: option.sm
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: option.xs
+                        }
+                    }
+                ]
+            });
+        else
+            $(this).slick({
+                accessibility: option.accessibility,
+                adaptiveHeight: option.adaptiveheight,
+                autoplay: option.autoplay,
+                autoplaySpeed: option.autoplayspeed,
+                arrows: option.arrows,
+                asNavFor: option.asnavfor,
+                appendArrows: option.appendarrows,
+                appendDots: option.appenddots,
+                prevArrow: option.prevarrow,
+                nextArrow: option.nextarrow,
+                centerMode: option.centermode,
+                centerPadding: option.centerpadding,
+                cssease: option.cssease,
+                dots: option.dots,
+                dotsClass: option.dotsclass,
+                draggable: option.draggable,
+                pauseOnHover: option.pauseonhover,
+                fade: option.fade,
+                vertical: option.vertical,
+                slidesToShow: option.lg,
+                infinite: option.loop,
+                swipeToSlide: true,
+
+                responsive: [
+                    {
+                        breakpoint: 1600,
+                        settings: {
+                            slidesToShow: option.lg
+                        }
+                    },
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: option.md
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: option.md
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: option.sm
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: option.xs
+                        }
+                    }
+                ]
+            });
+
+        $(this).on('init', function() {
+            var $firstAnimatingElements = $('div.hero-slide:first-child').find('[data-animation]');
+            doAnimations($firstAnimatingElements);
+        });
+        $(this).on('beforeChange', function(e, slick, currentSlide, nextSlide) {
+            var $animatingElements = $(this).find('[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
+            doAnimations($animatingElements);
+        });
+
+
+        function doAnimations(elements) {
+            var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            elements.each(function() {
+                var $this = $(this);
+                var $animationDelay = $this.data('animation-delay');
+                var $animationType = 'animated ' + $this.data('animation');
+                $this.css({
+                    'animation-delay': $animationDelay,
+                    '-webkit-animation-delay': $animationDelay
+                });
+                $this.addClass($animationType).one(animationEndEvents, function() {
+                    $this.removeClass($animationType);
+                });
+            });
+        }
+    });
+})(jQuery);
+
+
 // pure js below
 // back to top
 var backButton = document.getElementById("backToTop");
@@ -63,10 +253,6 @@ let unmute = () => {
   spokeVideo.muted = true
 }
 
-document.getElementById('spokeVideo').addEventListener('ended',showButton,false);
-function showButton() {
-    play_button = document.getElementById('spokeVideoPlay');
-    play_button.style.display = 'flex';
-}
+
 
 

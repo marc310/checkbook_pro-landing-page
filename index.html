@@ -35,7 +35,7 @@
                         <li><a href="https://order.shareit.com/cart/new?vendorid=200288303&PRODUCT[301015988]=1&cartcoupon=1&backlink=https%3A%2F%2Fcheckbook.pro%2Fthankyou.html">Buy a License</a>		</li>
                         <li><a href="guide.html">How to Use a Checkbook Pro</a></li>
                         <li>
-                            <a href="https://play.google.com/store/apps/details?id=com.us.jk.receiptscanner" target="_blank" class="button bt bt-primary shaded">
+                            <a href="receipt-scanner.html" target="_blank" class="button bt bt-primary shaded">
                                 <i class="fab fa-google-play"></i>
                                 <span>
                                     Receipt Scanner
@@ -50,7 +50,7 @@
     <!-- header img  -->
     <section id="header-img" class="parallax" style="background-image: url('./src/images/background-img.jpg');">
            <div class="mb_parallax_overlay">
-               <div class="container">
+               <div class="container pt-5 pb-5">
                    <div class="title-call animate__animated animate__fadeInLeft">
                        <span>A <strong>Dollar Tracked</strong></span>
                        <span>is a dollar <span class="tag">Saved</span></span>
@@ -451,10 +451,8 @@
 </html>
 
 <!-- jquery import -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- autoplay video plugins -->
-<!-- <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script> -->
-<!-- <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script src="./src/js/plugins/jquery.min.js"></script>
 <!-- global js functions -->
 <script src="./src/js/global.js"></script>
 
@@ -478,25 +476,10 @@ $(document).ready(function(){
   });
 });
 
-// $("video").prop('muted', true);
-//     if( $("video").prop('muted') ) {
-//       $("video").prop('muted', false);
-//       $('.btn').removeClass('mute');
-//       $('.btn').addClass('unmute');
-//     } else {
-//       $("video").prop('muted', true);
-//       $('.btn').removeClass('unmute');
-//       $('.btn').addClass('mute');
-//     }
-//   $(".btn").click( function (){
-//     if( $("video").prop('muted') ) {
-//       $("video").prop('muted', false);
-//       $('.btn').removeClass('mute');
-//       $('.btn').addClass('unmute');
-//     } else {
-//       $("video").prop('muted', true);
-//       $('.btn').removeClass('unmute');
-//       $('.btn').addClass('mute');
-//     }
-//   });
+document.getElementById('spokeVideo').addEventListener('ended',showButton,false);
+function showButton() {
+    play_button = document.getElementById('spokeVideoPlay');
+    play_button.style.display = 'flex';
+}
+
 </script>
