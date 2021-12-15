@@ -46,7 +46,6 @@ h2{
 h3{
     font-size: $heading3;
 }
-
 p{
     font-size: $regular-fontsize;
 }
@@ -89,11 +88,9 @@ p{
 .text-dark{
     color: $text-primary;
 }
-
 .to-center{
     @include toMarginCenter();
 }
-
 .i-flex{
     display: inline-flex;
 }

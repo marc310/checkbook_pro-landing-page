@@ -61,24 +61,7 @@
         }
     }
 
-    .list{
-        display: flex;
-        flex-direction: column;
-        padding-top: $size-5;
-        .item{
-            padding-top: $size-1;
-            padding-bottom: $size-1;
-            display: inline-flex;
-            align-items: center;
-            & i{
-                color: $primary;
-                margin-right: $size-1;
-            }
-            & p{
-                flex-wrap: wrap;
-            }
-        }
-    }
+    
 
 }
 

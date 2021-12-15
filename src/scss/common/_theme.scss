@@ -96,6 +96,16 @@ i.magnify{
         padding-bottom: $section-small-spacing!important;
         padding-top: $section-small-spacing!important;
     }
+    &.no-padding-top{
+        padding-top: 0!important;
+    }
+    &.no-padding-bottom{
+        padding-bottom: 0!important;
+    }
+    &.no-padding-top-bottom{
+        padding-bottom: 0!important;
+        padding-top: 0!important;
+    }
 }
 .section-tags{
     display: inline-flex;
@@ -120,6 +130,25 @@ i.magnify{
                 color: white;
                 font-size: 1.6em;
             }
+        }
+    }
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    padding-top: $size-5;
+    .item{
+        padding-top: $size-1;
+        padding-bottom: $size-1;
+        display: inline-flex;
+        align-items: center;
+        & i{
+            color: $primary;
+            margin-right: $size-1;
+        }
+        & p{
+            flex-wrap: wrap;
         }
     }
 }

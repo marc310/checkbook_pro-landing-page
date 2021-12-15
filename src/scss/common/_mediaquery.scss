@@ -161,6 +161,12 @@
     .container, .container-sm, .container-md {
         max-width: 100%; 
     } 
+    .split{
+        flex-direction: row;
+        > *{
+            flex-basis: 100%;
+        }
+    }
     .main-menu{
         .menu-links{
             padding-right: 0;
